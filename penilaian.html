@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SIAKAD - Transaksi Penilaian</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar Navigation -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-graduation-cap fa-2x"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2 text-left">
+                    <span class="font-weight-bold h5 mb-0 d-block">SIAKAD</span>
+                    <small style="font-size: 10px; letter-spacing: 1px;">APP</small>
+                </div>
+            </a>
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">MASTER DATA</div>
+            <li class="nav-item">
+                <a class="nav-link" href="prodi.html">
+                    <i class="fas fa-fw fa-university"></i>
+                    <span>Master Data Prodi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mahasiswa.html">
+                    <i class="fas fa-fw fa-user-graduate"></i>
+                    <span>Master Data Mahasiswa</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">TRANSAKSI</div>
+            <li class="nav-item active">
+                <a class="nav-link" href="penilaian.html">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Transaksi Penilaian</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block mt-4">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+            <div id="content">
+                <!-- Main Content -->
+                <div class="container-fluid px-4 mt-4">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
+                            <i class="fas fa-calculator text-primary mr-2"></i>Transaksi Penilaian Mahasiswa
+                        </h1>
+                        <button class="btn btn-primary shadow-sm font-weight-bold rounded-pill px-3">
+                            <i class="fas fa-plus-circle mr-1"></i> Input Penilaian Baru
+                        </button>
+                    </div>
+
+                    <!-- Data Card -->
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body">
+                            <h5 class="font-weight-bold text-primary mb-4">Rekapitulasi Nilai Akhir & Grade Mahasiswa</h5>
+                            <div class="table-responsive">
+                                <table class="table table-borderless text-center align-middle" id="dataTable" width="100%" cellspacing="0">
+                                    <thead class="bg-secondary text-white">
+                                        <tr>
+                                            <th>NIM</th>
+                                            <th>Nama Mahasiswa</th>
+                                            <th>Mata Kuliah</th>
+                                            <th>Tugas (30%)</th>
+                                            <th>UTS (30%)</th>
+                                            <th>UAS (40%)</th>
+                                            <th>Nilai Akhir</th>
+                                            <th>Grade</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Row 1 -->
+                                        <tr>
+                                            <td class="align-middle text-muted">230101001</td>
+                                            <td class="text-left font-weight-bold align-middle">Aditya Pratama</td>
+                                            <td class="text-left align-middle text-muted">Pemrograman Web</td>
+                                            <td class="align-middle text-muted">85</td>
+                                            <td class="align-middle text-muted">80</td>
+                                            <td class="align-middle text-muted">90</td>
+                                            <td class="font-weight-bold text-primary align-middle">85.5</td>
+                                            <td class="align-middle"><span class="badge badge-success px-2 py-2" style="border-radius: 6px;">A</span></td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Lulus</span></td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-secondary mb-1 d-block w-100"><i class="fas fa-print"></i></button>
+                                                <button class="btn btn-sm btn-info mb-1 d-block w-100"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger d-block w-100"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <!-- Row 2 -->
+                                        <tr>
+                                            <td class="align-middle text-muted">230101002</td>
+                                            <td class="text-left font-weight-bold align-middle">Siti Nurhaliza</td>
+                                            <td class="text-left align-middle text-muted">Pemrograman Web</td>
+                                            <td class="align-middle text-muted">90</td>
+                                            <td class="align-middle text-muted">88</td>
+                                            <td class="align-middle text-muted">92</td>
+                                            <td class="font-weight-bold text-primary align-middle">90.2</td>
+                                            <td class="align-middle"><span class="badge badge-success px-2 py-2" style="border-radius: 6px;">A</span></td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Lulus</span></td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-secondary mb-1 d-block w-100"><i class="fas fa-print"></i></button>
+                                                <button class="btn btn-sm btn-info mb-1 d-block w-100"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger d-block w-100"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <!-- Row 3 -->
+                                        <tr>
+                                            <td class="align-middle text-muted">230102001</td>
+                                            <td class="text-left font-weight-bold align-middle">Bagas Rahadian</td>
+                                            <td class="text-left align-middle text-muted">Basis Data</td>
+                                            <td class="align-middle text-muted">75</td>
+                                            <td class="align-middle text-muted">70</td>
+                                            <td class="align-middle text-muted">68</td>
+                                            <td class="font-weight-bold text-primary align-middle">70.7</td>
+                                            <td class="align-middle"><span class="badge badge-info px-2 py-2" style="border-radius: 6px;">B</span></td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Lulus</span></td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-secondary mb-1 d-block w-100"><i class="fas fa-print"></i></button>
+                                                <button class="btn btn-sm btn-info mb-1 d-block w-100"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger d-block w-100"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <!-- Row 4 -->
+                                        <tr>
+                                            <td class="align-middle text-muted">230103001</td>
+                                            <td class="text-left font-weight-bold align-middle">Dewi Anggraini</td>
+                                            <td class="text-left align-middle text-muted">Jaringan Komputer</td>
+                                            <td class="align-middle text-muted">60</td>
+                                            <td class="align-middle text-muted">55</td>
+                                            <td class="align-middle text-muted">50</td>
+                                            <td class="font-weight-bold text-primary align-middle">54.5</td>
+                                            <td class="align-middle"><span class="badge badge-danger px-2 py-2" style="border-radius: 6px;">D</span></td>
+                                            <td class="align-middle"><span class="badge badge-danger rounded-pill px-3 py-2">Tidak Lulus</span></td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-secondary mb-1 d-block w-100"><i class="fas fa-print"></i></button>
+                                                <button class="btn btn-sm btn-info mb-1 d-block w-100"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger d-block w-100"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <!-- Row 5 -->
+                                        <tr>
+                                            <td class="align-middle text-muted">230104001</td>
+                                            <td class="text-left font-weight-bold align-middle">Fajar Ramadan</td>
+                                            <td class="text-left align-middle text-muted">Kecerdasan Buatan</td>
+                                            <td class="align-middle text-muted">88</td>
+                                            <td class="align-middle text-muted">85</td>
+                                            <td class="align-middle text-muted">90</td>
+                                            <td class="font-weight-bold text-primary align-middle">87.9</td>
+                                            <td class="align-middle"><span class="badge badge-success px-2 py-2" style="border-radius: 6px;">A</span></td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Lulus</span></td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-secondary mb-1 d-block w-100"><i class="fas fa-print"></i></button>
+                                                <button class="btn btn-sm btn-info mb-1 d-block w-100"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger d-block w-100"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white mt-auto py-3">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto text-muted">
+                        <span>SIAKAD &copy; Transaksi Penilaian Mahasiswa 2026</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable();
+        });
+    </script>
+</body>
+</html>

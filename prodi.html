@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SIAKAD - Master Data Program Studi</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar Navigation -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-graduation-cap fa-2x"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2 text-left">
+                    <span class="font-weight-bold h5 mb-0 d-block">SIAKAD</span>
+                    <small style="font-size: 10px; letter-spacing: 1px;">APP</small>
+                </div>
+            </a>
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">MASTER DATA</div>
+            <li class="nav-item active">
+                <a class="nav-link" href="prodi.html">
+                    <i class="fas fa-fw fa-university"></i>
+                    <span>Master Data Prodi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mahasiswa.html">
+                    <i class="fas fa-fw fa-user-graduate"></i>
+                    <span>Master Data Mahasiswa</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">TRANSAKSI</div>
+            <li class="nav-item">
+                <a class="nav-link" href="penilaian.html">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Transaksi Penilaian</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block mt-4">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm justify-content-end pr-4">
+                    <span class="mr-3 text-gray-700 font-weight-bold">Dr. Dosen Pengampuh, M.Kom</span>
+                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg" width="35" height="35">
+                </nav>
+
+                <!-- Main Content -->
+                <div class="container-fluid px-4">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
+                            <i class="fas fa-university text-primary mr-2"></i>Master Data Program Studi
+                        </h1>
+                        <button class="btn btn-primary shadow-sm font-weight-bold rounded-pill px-3">
+                            <i class="fas fa-plus-circle mr-1"></i> Tambah Prodi Baru
+                        </button>
+                    </div>
+
+                    <!-- Data Card -->
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body">
+                            <h5 class="font-weight-bold text-primary mb-4">Daftar Program Studi / Jurusan</h5>
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center align-middle" id="dataTable" width="100%" cellspacing="0">
+                                    <thead class="bg-dark text-white">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Kode Prodi</th>
+                                            <th>Nama Program Studi</th>
+                                            <th>Jenjang</th>
+                                            <th>Ketua Program Studi (Kaprodi)</th>
+                                            <th>Akreditasi</th>
+                                            <th>Mahasiswa Aktif</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle">1</td>
+                                            <td class="align-middle"><span class="badge badge-light text-primary border font-weight-bold px-2 py-1">PR001</span></td>
+                                            <td class="text-left font-weight-bold align-middle">Teknik Informatika</td>
+                                            <td class="align-middle"><span class="badge badge-info rounded-pill px-3 py-2">S1</span></td>
+                                            <td class="text-left align-middle">Dr. Budi Santoso, M.Kom</td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Unggul</span></td>
+                                            <td class="text-left align-middle"><strong class="text-dark">120</strong> Mahasiswa</td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-info rounded"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger rounded"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">2</td>
+                                            <td class="align-middle"><span class="badge badge-light text-primary border font-weight-bold px-2 py-1">PR002</span></td>
+                                            <td class="text-left font-weight-bold align-middle">Sistem Informasi</td>
+                                            <td class="align-middle"><span class="badge badge-info rounded-pill px-3 py-2">S1</span></td>
+                                            <td class="text-left align-middle">Siti Aminah, M.T.</td>
+                                            <td class="align-middle"><span class="badge badge-primary rounded-pill px-3 py-2">Baik Sekali</span></td>
+                                            <td class="text-left align-middle"><strong class="text-dark">95</strong> Mahasiswa</td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-info rounded"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger rounded"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">3</td>
+                                            <td class="align-middle"><span class="badge badge-light text-primary border font-weight-bold px-2 py-1">PR003</span></td>
+                                            <td class="text-left font-weight-bold align-middle">Teknologi Informasi</td>
+                                            <td class="align-middle"><span class="badge badge-secondary rounded-pill px-3 py-2">D3</span></td>
+                                            <td class="text-left align-middle">Ahmad Dahlan, M.Sc</td>
+                                            <td class="align-middle"><span class="badge badge-primary rounded-pill px-3 py-2">Baik</span></td>
+                                            <td class="text-left align-middle"><strong class="text-dark">60</strong> Mahasiswa</td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-info rounded"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger rounded"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">4</td>
+                                            <td class="align-middle"><span class="badge badge-light text-primary border font-weight-bold px-2 py-1">PR004</span></td>
+                                            <td class="text-left font-weight-bold align-middle">Sains Data</td>
+                                            <td class="align-middle"><span class="badge badge-info rounded-pill px-3 py-2">S1</span></td>
+                                            <td class="text-left align-middle">Dr. Retno Wulandari, M.Si</td>
+                                            <td class="align-middle"><span class="badge badge-success rounded-pill px-3 py-2">Unggul</span></td>
+                                            <td class="text-left align-middle"><strong class="text-dark">45</strong> Mahasiswa</td>
+                                            <td class="align-middle">
+                                                <button class="btn btn-sm btn-info rounded"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger rounded"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white mt-auto">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; SIAKAD APP 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable();
+        });
+    </script>
+</body>
+</html>

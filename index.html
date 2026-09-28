@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SIAKAD - Dashboard</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <!-- Sidebar Navigation -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center my-2" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-graduation-cap fa-2x"></i>
+                </div>
+                <div class="sidebar-brand-text mx-2 text-left">
+                    <span class="font-weight-bold h5 mb-0 d-block">SIAKAD</span>
+                    <small style="font-size: 10px; letter-spacing: 1px;">APP</small>
+                </div>
+            </a>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">MASTER DATA</div>
+            <li class="nav-item">
+                <a class="nav-link" href="prodi.html">
+                    <i class="fas fa-fw fa-university"></i>
+                    <span>Master Data Prodi</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mahasiswa.html">
+                    <i class="fas fa-fw fa-user-graduate"></i>
+                    <span>Master Data Mahasiswa</span>
+                </a>
+            </li>
+
+            <div class="sidebar-heading mt-3">TRANSAKSI</div>
+            <li class="nav-item">
+                <a class="nav-link" href="penilaian.html">
+                    <i class="fas fa-fw fa-calculator"></i>
+                    <span>Transaksi Penilaian</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block mt-4">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow-sm justify-content-end pr-4">
+                    <span class="mr-3 text-gray-700 font-weight-bold">Dr. Dosen Pengampuh, M.Kom</span>
+                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg" width="35" height="35">
+                </nav>
+
+                <!-- Page Content -->
+                <div class="container-fluid px-4">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Dashboard Akademik</h1>
+                        <a href="penilaian.html" class="btn btn-primary shadow-sm font-weight-bold px-3">
+                            <i class="fas fa-plus fa-sm text-white-50 mr-1"></i> Input Penilaian Baru
+                        </a>
+                    </div>
+
+                    <!-- Top 4 Summary Cards -->
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow-sm h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">TOTAL MAHASISWA</div>
+                                            <div class="h3 mb-0 font-weight-bold text-gray-800">128</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-user-graduate fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow-sm h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">TOTAL PROGRAM STUDI</div>
+                                            <div class="h3 mb-0 font-weight-bold text-gray-800">4</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-university fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow-sm h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">TRANSAKSI PENILAIAN</div>
+                                            <div class="h3 mb-0 font-weight-bold text-gray-800">96</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-calculator fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow-sm h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">RATA-RATA NILAI AKHIR</div>
+                                            <div class="h3 mb-0 font-weight-bold text-gray-800">83.7</div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-chart-line fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Area -->
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header py-3 bg-white border-bottom-0">
+                                    <h6 class="m-0 font-weight-bold text-primary">
+                                        <i class="fas fa-chart-bar mr-2"></i>Sebaran Grade Penilaian Mahasiswa
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-bar"><canvas id="myBarChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header py-3 bg-white border-bottom-0">
+                                    <h6 class="m-0 font-weight-bold text-primary">
+                                        <i class="fas fa-chart-pie mr-2"></i>Distribusi Mahasiswa per Prodi
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-2"><canvas id="myPieChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white mt-auto">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Copyright &copy; SIAKAD APP 2026</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        var ctxBar = document.getElementById("myBarChart");
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ["Grade A", "Grade B+", "Grade B", "Grade C", "Grade D", "Grade E"],
+                datasets: [{ label: "Jumlah Mahasiswa", backgroundColor: "#4e73df", data: [42, 35, 28, 12, 5, 2] }]
+            },
+            options: { scales: { yAxes: [{ ticks: { beginAtZero: true, max: 45 } }] }, legend: { display: false } }
+        });
+
+        var ctxPie = document.getElementById("myPieChart");
+        new Chart(ctxPie, {
+            type: 'doughnut',
+            data: {
+                labels: ["Teknik Informatika", "Sistem Informasi", "Teknologi Informasi"],
+                datasets: [{ data: [50, 35, 25], backgroundColor: ['#4e73df', '#1cc88a', '#f6c23e'] }]
+            },
+            options: { cutoutPercentage: 70 }
+        });
+    </script>
+</body>
+</html>
